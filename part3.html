@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selamat Ulang Tahun Diana</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('https://lh3.googleusercontent.com/fife/ALs6j_GrOicrfxSfOQdu2gaPd99jy2fAzKXJLU9od0VrYmXUmg_-W0KjbE8seXzB2hMzhwbH0XXhGnU3P7kOE0_jA-XMqxvOnCTnCie2FQ_aZOb2SVnuRfJHlumomkKoBJsQA2RUXZrvnbtC0NbFQo425JEFuPGwbazol4mWLOpvnrNSMveGkuG0xMLfppKCuAQk6iFWuepHTZbF7gsdhv3m-goQ_SkCMs0nf3rzQO_EwARSqsYNO0Yqy8pfYcS-Ay7k1iCLrctufJLNxi4G-tgN4zLcNuCHTZBQsnAM8ukit_wWjzwM6Jwl0mqi26U-oI_ZHEZdm8EIpqQVSQ0-KamcqKXic6f2zm1bazCtMi7QocM5zLWAMOtJ152T6bTVi7nLDRQ3SBkaIl_IpiHtzF69N23vBIy1p8Hi2oGOeeNUrHJ4gjmOLO8Z6FG67p311nfuh2U40bQO1yB8ZA5rcr_qvE7MhV_hPCaCA3VX2Fu7V5tsLz7WwDC5uMlrk_cy_dMx1cINMv3z7ws9azUZDylza_sWXbrYBnVg8UuZC0F3ziAWzZOVZepsPsA0qkULETew9ZXXc30JolNEOvjSXDjGgUaH893uPzUOY8t92XkK-B9TtEY4NhsDIv76W04mQ_Zn9IyirUu_hhAxilrUPxozh3A9N48gS-9lbwtUVYB4zqjV8QrhQNKY9TNLN_IINGq455gGtZ5lXrsWaH2_0cEeh_a6vS8-PsgsBMrzEDO39RBIpxiUu5D3sSKxW3bPF08OspK9GDtg3LAdlXljRTuBG0tb_MHUykfYKxwybqB-AJubzamMHu3IEYlioZ70czaWTWTJfvZTobLg5KTI9QajRQchmSuFfh_xoS6ahVbwKXNFgGP3Gvd_SOEKjSFClEjdPZFD0YiCAy-NsS3g3sIbYvF-7uFlciNnO0Ftyn9Vzb3E5Kgf7-9NM4fpzK8qcyzwFm9dohsEIHZ7jU8eZmy9onsM88yMU2ce91S1rZwOmk6s-4roAs3Fo76n5qPy9Dd76MRE6upnNy8MW_i7HQdbYMjGVwyyhCsiAe5Wk01PRXF6au9azMTIKDvMHrt-5mewbHcUuCgYgMD2tI7kAxOyrHKj8t1JsyESdVB76uOkQFGoXDfHWuDXVULnOu0fRZu90y1DI_Lh29apRIg6d1BNYtLhYm_iff838tNfXSmHG5Crt0_ke60xY4WNCaTp9ROTChHsdfnV7DwEcPXfMxZxrE13WEVqFV3nZ0st_9Gb0gLx2wAnQ6v-fugCj79hinzT4EOT7-UIrJLGaWaQCMTg1gQegxFTemkaiDhuUnXmJbTL12CFjETzsKFxauYx13_mavKoG5yUwQvo_8Uz6e7PcoA54WOcYzBjLd60kt4JDFPa6Pz6DHXF6DiIxNOFFT0a9feUkPQgpAz3iyl7vAfYnHH73Y8poBjv3ZW988cDJiF01AhHq9xDTnymh_v9HNQUslo7PZWvbyYS3d9HkUQhd3VG8byAHA=s512') no-repeat center center fixed, linear-gradient(to bottom, #E0F7FA, #FFFFFF);
+      background-size: cover;
+      color: #444;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: rgba(255, 255, 255, 0.85);
+      color: #333;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      color: #4A6572;
+      animation: fadeInDown 2s ease;
+    }
+    header p {
+      font-weight: 300;
+      margin: 0.3rem 0;
+    }
+
+    .gallery-section {
+      padding: 2rem;
+      text-align: center;
+      background: rgba(255, 252, 240, 0.85);
+    }
+
+    .gallery-title {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #6D597A;
+      margin-bottom: 1rem;
+    }
+
+    /* Ubah layout galeri menjadi horizontal scroll */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      justify-items: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 180px;
+      height: auto;
+      border: 8px solid #fff;
+      border-radius: 1rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      background: #f8f8f8;
+      position: relative;
+      transform: rotate(-2deg);
+      transition: all 0.4s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.15) rotate(1deg);
+      z-index: 1;
+    }
+
+    .hanging {
+      position: relative;
+      display: inline-block;
+    }
+
+    .hanging::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      width: 2px;
+      height: 20px;
+      background: #999;
+    }
+
+    .hanging::after {
+      content: '🔸';
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }    
+
+    .rainbow-text {
+        font-size: 1.8rem;
+        font-weight: bold;
+        background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+        background-size: 400% 100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: rainbowFlow 6s linear infinite;
+        text-shadow: 0 0 5px rgba(255,255,255,0.5);
+    }
+
+    @keyframes rainbowFlow {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 100% 50%; }
+    }
+
+    
+    .cake {
+      text-align: center;
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+    }
+
+    .cake img {
+      width: 400px;
+      height: auto;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .cake img {
+        width: 400px;
+        height: auto;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+        border-radius: 1rem;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .cake h2 {
+        color: #fff;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .gift, .wishes {
+        display: none;
+        text-align: center;
+        margin: 2rem auto;
+        background: rgba(240, 255, 255, 0.9);
+        padding: 1rem;
+        border-radius: 1rem;
+        color: #333;
+        max-width: 500px; /* batasi lebar maksimal */
+        width: 90%; /* agar responsif di layar kecil */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* opsional: tambahkan bayangan agar lebih elegan */
+    }
+
+
+    .gift img {
+      width: 200px;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .wishes input {
+      margin: 0.5rem auto;
+      display: block;
+      padding: 0.6rem;
+      width: 80%;
+      max-width: 400px;
+      border-radius: 0.5rem;
+      border: 1px solid #CCC;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .wishes button {
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      background: #AEDFF7;
+      color: #444;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    .wishes button:hover {
+      background: #8CC1E7;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div id="popup" style="position:fixed;top:0;left:0;width:100%;height:100%;background:white;display:flex;align-items:center;justify-content:center;z-index:9999;">
+    <div style="text-align:center;padding:2rem;background:#fff;border-radius:1rem;box-shadow:0 5px 15px rgba(0,0,0,0.2);">
+      <h2 style="font-family:'Poppins', sans-serif; color:#4A6572;">🔊 Yuk naikkan volume-nya!</h2>
+      <p style="font-family:'Poppins', sans-serif;">Naikkan volume sampai full ya dedek</p>
+      <button onclick="mulai()" style="margin-top:1rem;padding:0.7rem 1.5rem;font-size:1rem;background:#AEDFF7;color:#444;border:none;border-radius:0.5rem;">OK</button>
+    </div>
+  </div>
+
+  <audio id="bgm" loop>
+    <source src="D:\data orang\diana bdg\tah\musik.mp4" type="audio/mpeg">
+  </audio>
+
+  <header>
+    <h1>Selamat Ulang Tahun, Diana Faikatul Hikmah!</h1>
+    <p>14 Mei 2003</p>
+    <p>Semoga panjang umur, sehat selalu, dan impian-impianmu tercapai 💙</p>
+  </header>
+
+  <section class="gallery-section">
+    <div class="gallery-title">Tetap semangat yaa</div>
+    <div class="gallery">
+	  <div class="hanging"><img src="data/4.png" alt="1-1"></div>
+      <div class="hanging"><img src="data/5.jpg" alt="1-2"></div>
+      <div class="hanging"><img src="data/1.jpg" alt="1-3"></div>
+      <div class="hanging"><img src="data/2.png" alt="1-4"></div>
+      <div class="hanging"><img src="data/3.png" alt="1-5"></div>
+    </div>
+  </section>
+
+  <section class="cake">
+    <h2 class="rainbow-text">Klik kuenya, tiup lilinnya 🎂</h2>
+    <img src="data/kueku.jpg" id="cake" alt="Kue ulang tahun" class="cake-image">
+  </section>
+
+  <section class="gift" id="giftSection">
+    <h2>Hadiah dariku 🎁</h2>
+    <img src="hadiah.jpg" alt="Hadiah">
+    <p><strong>Impian dan Doa kamu:</strong></p>
+  </section>
+
+  <section class="wishes" id="wishSection">
+    <input type="text" id="wish1" placeholder="Impian/Doa 1">
+    <input type="text" id="wish2" placeholder="Impian/Doa 2">
+    <input type="text" id="wish3" placeholder="Impian/Doa 3">
+    <input type="text" id="wish4" placeholder="Impian/Doa 4">
+    <input type="text" id="wish5" placeholder="Impian/Doa 5">
+    <button onclick="sendWishes()">Kirim ke WhatsApp</button>
+  </section>
+
+  <script>
+    function mulai() {
+      document.getElementById('popup').style.display = 'none';
+      const bgm = document.getElementById('bgm');
+      bgm.volume = 1;
+      bgm.play();
+    }
+
+    const cake = document.getElementById('cake');
+    const wishSection = document.getElementById('wishSection');
+    const giftSection = document.getElementById('giftSection');
+
+    cake.addEventListener('click', () => {
+      const confetti = document.createElement('div');
+      confetti.innerHTML = '🎆🎇✨💥';
+      confetti.style.fontSize = '3rem';
+      confetti.style.textAlign = 'center';
+      document.body.appendChild(confetti);
+      giftSection.style.display = 'block';
+      wishSection.style.display = 'block';
+      cake.style.display = 'none';
+    });
+
+    function sendWishes() {
+      const w1 = document.getElementById('wish1').value;
+      const w2 = document.getElementById('wish2').value;
+      const w3 = document.getElementById('wish3').value;
+      const w4 = document.getElementById('wish4').value;
+      const w5 = document.getElementById('wish5').value;
+      const pesan = `Impian dan doa dari Diana:
+1. ${w1}
+2. ${w2}
+3. ${w3}
+4. ${w4}
+5. ${w5}
+Semoga impian Diana terkabul, aamiin.`;
+      const url = `https://wa.me/6289676277184?text=${encodeURIComponent(pesan)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>
