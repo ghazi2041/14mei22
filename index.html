@@ -191,6 +191,71 @@
       from { opacity: 0; transform: translateY(-50px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    @media only screen and (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    .gallery img {
+        max-width: 120px;
+        border: 5px solid #fff;
+    }
+
+    .rainbow-text {
+        font-size: 1.2rem;
+    }
+
+    .cake img {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .gift img {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .wishes input {
+        width: 90%;
+        font-size: 0.9rem;
+    }
+
+    .wishes button {
+        width: 90%;
+        font-size: 0.95rem;
+        padding: 0.6rem;
+    }
+
+    .gift, .wishes {
+        padding: 1rem 0.5rem;
+    }
+
+    #popup > div {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    #popup h2 {
+        font-size: 1.2rem;
+    }
+
+    #popup p {
+        font-size: 0.95rem;
+    }
+
+    #popup button {
+        width: 80%;
+        font-size: 1rem;
+    }
+    }
+
+
   </style>
 </head>
 <body>
