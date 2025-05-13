@@ -3,10 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Selamat Ulang Tahun Diana</title>
+  <title>Selamat Ulang Tahun dedek Diana</title>
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
+
+    @keyframes shake {
+        0% { transform: translateX(0); }
+        25% { transform: translateX(-5px); }
+        50% { transform: translateX(5px); }
+        75% { transform: translateX(-5px); }
+        100% { transform: translateX(0); }
+    }
+
+    .animate-shake {
+        animation: shake 0.5s ease;
+    }
+
+
+
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
@@ -272,13 +287,13 @@
   </audio>
 
   <header>
-    <h1>Selamat Ulang Tahun, Diana Faikatul Hikmah!</h1>
-    <p>14 Mei 2003</p>
-    <p>Semoga panjang umur, sehat selalu, dan impian-impianmu tercapai 💙</p>
+    <h1 onclick="animateOnTouch(this)">Selamat Ulang Tahun, Diana Faikatul Hikmah!</h1>
+    <p onclick="animateOnTouch(this)">14 Mei 2003</p>
+    <p onclick="animateOnTouch(this)">Semoga panjang umur, sehat selalu, dan impian-impianmu tercapai 💙</p>
   </header>
 
   <section class="gallery-section">
-    <div class="gallery-title">Tetap semangat yaa</div>
+    <div class="gallery-title" onclick="animateOnTouch(this)" >Tetap semangat yaa</div>
     <div class="gallery">
 	  <div class="hanging"><img src="data/4.png" alt="1-1"></div>
       <div class="hanging"><img src="data/5.jpg" alt="1-2"></div>
@@ -289,14 +304,14 @@
   </section>
 
   <section class="cake">
-    <h2 class="rainbow-text">Klik kuenya, tiup lilinnya 🎂</h2>
+    <h2 class="rainbow-text" onclick="animateOnTouch(this)" >Klik kuenya, tiup lilinnya 🎂</h2>
     <img src="data/kueku.jpg" id="cake" alt="Kue ulang tahun" class="cake-image">
   </section>
 
   <section class="gift" id="giftSection">
-    <h2>Hadiah dariku 🎁</h2>
+    <h2 onclick="animateOnTouch(this)" >Hadiah dariku 🎁</h2>
     <img src="hadiah.jpg" alt="Hadiah">
-    <p><strong>Impian dan Doa kamu:</strong></p>
+    <p><strong onclick="animateOnTouch(this)" >Impian dan Doa kamu:</strong></p>
   </section>
 
   <section class="wishes" id="wishSection">
@@ -305,7 +320,7 @@
     <input type="text" id="wish3" placeholder="Impian/Doa 3">
     <input type="text" id="wish4" placeholder="Impian/Doa 4">
     <input type="text" id="wish5" placeholder="Impian/Doa 5">
-    <button onclick="sendWishes()">Kirim ke WhatsApp</button>
+    <button onclick="sendWishes()">Kirim ke WhatsApp Mas ya dedek</button>
   </section>
 
   <script>
@@ -315,6 +330,14 @@
       bgm.volume = 1;
       bgm.play();
     }
+
+    function animateOnTouch(element) {
+        element.classList.add("animate-shake");
+        setTimeout(() => {
+            element.classList.remove("animate-shake");
+        }, 500); // hapus class setelah animasi selesai
+    }
+
 
     const cake = document.getElementById('cake');
     const wishSection = document.getElementById('wishSection');
@@ -337,13 +360,13 @@
       const w3 = document.getElementById('wish3').value;
       const w4 = document.getElementById('wish4').value;
       const w5 = document.getElementById('wish5').value;
-      const pesan = `Impian dan doa dari Diana:
+      const pesan = `Impian dan doa dari dedek Diana:
 1. ${w1}
 2. ${w2}
 3. ${w3}
 4. ${w4}
 5. ${w5}
-Semoga impian Diana terkabul, aamiin.`;
+Semoga impian dedek Diana terkabul, aamiin.`;
       const url = `https://wa.me/6289676277184?text=${encodeURIComponent(pesan)}`;
       window.open(url, '_blank');
     }
