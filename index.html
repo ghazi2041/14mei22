@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
   <title>Selamat Ulang Tahun Diana</title>
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -24,11 +24,11 @@
     }
 
     header h1 {
-      font-size: 2.8rem;
+      font-size: 2rem;
       font-weight: 600;
       color: #4A6572;
-      animation: fadeInDown 2s ease;
     }
+
     header p {
       font-weight: 300;
       margin: 0.3rem 0;
@@ -47,30 +47,25 @@
       margin-bottom: 1rem;
     }
 
-    /* Ubah layout galeri menjadi horizontal scroll */
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 1rem;
       justify-items: center;
     }
 
     .gallery img {
       width: 100%;
-      max-width: 180px;
-      height: auto;
-      border: 8px solid #fff;
+      max-width: 160px;
+      border: 6px solid #fff;
       border-radius: 1rem;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      background: #f8f8f8;
-      position: relative;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       transform: rotate(-2deg);
-      transition: all 0.4s ease;
+      transition: transform 0.3s ease;
     }
 
     .gallery img:hover {
-      transform: scale(1.15) rotate(1deg);
-      z-index: 1;
+      transform: scale(1.05);
     }
 
     .hanging {
@@ -94,66 +89,53 @@
       top: -30px;
       left: 50%;
       transform: translateX(-50%);
-    }    
+    }
 
     .rainbow-text {
-        font-size: 1.8rem;
-        font-weight: bold;
-        background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
-        background-size: 400% 100%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: rainbowFlow 6s linear infinite;
-        text-shadow: 0 0 5px rgba(255,255,255,0.5);
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #6D597A;
     }
 
-    @keyframes rainbowFlow {
-        0% { background-position: 0% 50%; }
-        100% { background-position: 100% 50%; }
-    }
-
-    
     .cake {
       text-align: center;
-      margin-top: 5rem;
-      margin-bottom: 5rem;
+      margin-top: 4rem;
+      margin-bottom: 4rem;
     }
 
     .cake img {
-        width: 400px;
-        height: auto;
-        cursor: pointer;
-        transition: transform 0.3s ease-in-out;
-        border-radius: 1rem;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      width: 320px;
+      height: auto;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+      border-radius: 1rem;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
     }
 
     .cake img:hover,
     .cake img:active {
-        transform: scale(1.1);
+      transform: scale(1.05);
     }
 
-
     .cake h2 {
-        color: #fff;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-        font-size: 1.8rem;
-        margin-bottom: 1.5rem;
+      color: #fff;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+      font-size: 1.6rem;
+      margin-bottom: 1.2rem;
     }
 
     .gift, .wishes {
-        display: none;
-        text-align: center;
-        margin: 2rem auto;
-        background: rgba(240, 255, 255, 0.9);
-        padding: 1rem;
-        border-radius: 1rem;
-        color: #333;
-        max-width: 500px; /* batasi lebar maksimal */
-        width: 90%; /* agar responsif di layar kecil */
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* opsional: tambahkan bayangan agar lebih elegan */
+      display: none;
+      text-align: center;
+      margin: 2rem auto;
+      background: rgba(240, 255, 255, 0.9);
+      padding: 1rem;
+      border-radius: 1rem;
+      color: #333;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
-
 
     .gift img {
       width: 200px;
@@ -169,7 +151,6 @@
       max-width: 400px;
       border-radius: 0.5rem;
       border: 1px solid #CCC;
-      font-family: 'Poppins', sans-serif;
     }
 
     .wishes button {
@@ -181,81 +162,51 @@
       border-radius: 0.5rem;
       cursor: pointer;
       font-weight: 600;
-      transition: background 0.3s ease;
     }
+
     .wishes button:hover {
       background: #8CC1E7;
     }
 
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-50px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
     @media only screen and (max-width: 600px) {
-    header h1 {
-        font-size: 1.8rem;
-    }
+      header h1 {
+        font-size: 1.4rem;
+      }
 
-    .gallery {
+      .gallery {
         grid-template-columns: repeat(2, 1fr);
         gap: 0.5rem;
-    }
+      }
 
-    .gallery img {
+      .gallery img {
         max-width: 120px;
-        border: 5px solid #fff;
-    }
+        border: 4px solid #fff;
+      }
 
-    .rainbow-text {
+      .rainbow-text {
         font-size: 1.2rem;
-    }
+      }
 
-    .cake img {
+      .cake img {
         width: 80%;
-        max-width: 300px;
-    }
-
-    .gift img {
-        width: 100%;
         max-width: 250px;
-    }
+      }
 
-    .wishes input {
-        width: 90%;
-        font-size: 0.9rem;
-    }
+      .gift img {
+        width: 100%;
+        max-width: 200px;
+      }
 
-    .wishes button {
+      .wishes input, .wishes button {
         width: 90%;
         font-size: 0.95rem;
-        padding: 0.6rem;
-    }
+      }
 
-    .gift, .wishes {
-        padding: 1rem 0.5rem;
-    }
-
-    #popup > div {
+      #popup > div {
         width: 90%;
         padding: 1.5rem;
+      }
     }
-
-    #popup h2 {
-        font-size: 1.2rem;
-    }
-
-    #popup p {
-        font-size: 0.95rem;
-    }
-
-    #popup button {
-        width: 80%;
-        font-size: 1rem;
-    }
-    }
-
-
   </style>
 </head>
 <body>
@@ -268,7 +219,8 @@
   </div>
 
   <audio id="bgm" loop>
-    <source src="D:\data orang\diana bdg\tah\musik.mp4" type="audio/mpeg">
+    <source src="https://example.com/musik.mp3" type="audio/mpeg">
+    <!-- Ganti URL di atas dengan link mp3 online -->
   </audio>
 
   <header>
@@ -280,7 +232,7 @@
   <section class="gallery-section">
     <div class="gallery-title">Tetap semangat yaa</div>
     <div class="gallery">
-	  <div class="hanging"><img src="data/4.png" alt="1-1"></div>
+      <div class="hanging"><img src="data/4.png" alt="1-1"></div>
       <div class="hanging"><img src="data/5.jpg" alt="1-2"></div>
       <div class="hanging"><img src="data/1.jpg" alt="1-3"></div>
       <div class="hanging"><img src="data/2.png" alt="1-4"></div>
@@ -290,7 +242,7 @@
 
   <section class="cake">
     <h2 class="rainbow-text">Klik kuenya, tiup lilinnya 🎂</h2>
-    <img src="data/kueku.jpg" id="cake" alt="Kue ulang tahun" class="cake-image">
+    <img src="data/kueku.jpg" id="cake" alt="Kue ulang tahun">
   </section>
 
   <section class="gift" id="giftSection">
@@ -313,7 +265,7 @@
       document.getElementById('popup').style.display = 'none';
       const bgm = document.getElementById('bgm');
       bgm.volume = 1;
-      bgm.play();
+      bgm.play().catch(err => console.log("Audio gagal diputar otomatis:", err));
     }
 
     const cake = document.getElementById('cake');
@@ -337,13 +289,7 @@
       const w3 = document.getElementById('wish3').value;
       const w4 = document.getElementById('wish4').value;
       const w5 = document.getElementById('wish5').value;
-      const pesan = `Impian dan doa dari Diana:
-1. ${w1}
-2. ${w2}
-3. ${w3}
-4. ${w4}
-5. ${w5}
-Semoga impian Diana terkabul, aamiin.`;
+      const pesan = `Impian dan doa dari Diana:\n1. ${w1}\n2. ${w2}\n3. ${w3}\n4. ${w4}\n5. ${w5}\nSemoga impian Diana terkabul, aamiin.`;
       const url = `https://wa.me/6289676277184?text=${encodeURIComponent(pesan)}`;
       window.open(url, '_blank');
     }
