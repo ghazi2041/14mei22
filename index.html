@@ -308,21 +308,39 @@
     <img src="data/kueku.jpg" id="cake" alt="Kue ulang tahun" class="cake-image">
   </section>
 
-  <section class="gift" id="giftSection">
+<!--   <section class="gift" id="giftSection">
     <h2 onclick="animateOnTouch(this)" >Hadiah dariku 🎁</h2>
 <!--     <img src="admin.jpg" alt="Hadiah"> -->
-    <img src="admin.jpg" alt="Hadiah" onerror="this.alt='Gambar tidak ditemukan'; this.style.display='none';">
+<!--     <img src="admin.jpg" alt="Hadiah" onerror="this.alt='Gambar tidak ditemukan'; this.style.display='none';">
     <p><strong onclick="animateOnTouch(this)" >Impian dan Doa kamu:</strong></p>
-  </section>
+  </section> --> -->
 
-  <section class="wishes" id="wishSection">
+<section class="gift" id="giftSection">
+  <h2 onclick="animateOnTouch(this)" >Hadiah dariku 🎁</h2>
+  <img src="admin.jpg" alt="Hadiah">
+  <p onclick="animateOnTouch(this)">Semoga hadiahnya bermanfaat ya, 100 hadiah buat adek, 50k buat tambahan bikin behel.</p>
+</section>
+
+
+<!--   <section class="wishes" id="wishSection">
     <input type="text" id="wish1" placeholder="Impian/Doa 1">
     <input type="text" id="wish2" placeholder="Impian/Doa 2">
     <input type="text" id="wish3" placeholder="Impian/Doa 3">
     <input type="text" id="wish4" placeholder="Impian/Doa 4">
     <input type="text" id="wish5" placeholder="Impian/Doa 5">
     <button onclick="sendWishes()">Kirim ke WhatsApp Mas ya dedek</button>
-  </section>
+  </section> -->
+
+<section class="wishes" id="wishSection">
+  <p onclick="animateOnTouch(this)"><strong>Impian dan Doa kamu:</strong></p>
+  <input type="text" id="wish1" placeholder="Impian/Doa 1">
+  <input type="text" id="wish2" placeholder="Impian/Doa 2">
+  <input type="text" id="wish3" placeholder="Impian/Doa 3">
+  <input type="text" id="wish4" placeholder="Impian/Doa 4">
+  <input type="text" id="wish5" placeholder="Impian/Doa 5">
+  <button onclick="sendWishes()">Kirim ke WhatsApp Mas ya dedek</button>
+</section>
+
 
   <script>
     function mulai() {
